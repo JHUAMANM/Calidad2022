@@ -1,0 +1,39 @@
+@using Microsoft.AspNetCore.Components.Forms
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h1>Nueva Cuenta</h1>
+            <form action="/cuentaTransaccion/create?cuentaId=@ViewBag.CuentaId" method="post">
+                <div>
+                    <label for="Tipo">Tipo</label>
+                    <select class="form-select" name="Tipo" id="Tipo">
+                        <option value="INGRESO">Ingreso</option>
+                        <option value="GASTO">Gasto</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Fecha">Fecha</label>
+                    <input type="datetime-local" class="form-control" Name="Fecha" id="Fecha" value="@Model.Fecha">
+                    @Html.ValidationMessage("Nombre")
+                </div>
+
+                <div class="mb-3">
+                    <label for="Monto">Monto</label>
+                    <input type="text" class="form-control" Name="Monto" id="Monto" value="@Model.Monto">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="Nota">Nota</label>
+                    <input type="text" class="form-control" Name="Nota" id="Nota" value="@Model.Nota">
+                </div>
+
+                <br>
+                <button class="btn btn-primary">Guardar</button>
+                <a href="/cuenta/index" class="btn btn-link">Cancelar</a>
+            </form>
+        </div>
+    </div>
+
+</div>

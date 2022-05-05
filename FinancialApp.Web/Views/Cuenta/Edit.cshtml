@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h1>Editar Cuenta</h1>
+            <form action="/cuenta/edit?id=@Model.Id" method="post">
+                <div class="form-group">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" class="form-control" Name="Nombre" id="Nombre" value="@Model.Nombre">
+                </div>
+                <br>
+                <button class="btn btn-primary">Guardar</button>
+                <a href="/cuenta/index" class="btn btn-link">Cancelar</a>
+            </form>
+        </div>
+    </div>
+
+</div>

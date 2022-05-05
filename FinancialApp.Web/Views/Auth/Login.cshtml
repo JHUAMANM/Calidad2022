@@ -1,0 +1,12 @@
+@{
+    Layout = null;
+}
+
+<form method="post" action="/auth/login">
+    
+    @Html.ValidationMessage("AuthError")
+    
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button>Login</button>
+</form>
